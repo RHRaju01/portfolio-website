@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg: #f7f3ed;
+  --color-text: #1a1a1d;
+  --color-accent: #c5622d;
+  --color-accent-soft: #e8dcc8;
+  --font-heading: "Fraunces", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+.project-card {
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  margin: 1rem;
+}
+
+#hero {
+  text-align: center;
+}
