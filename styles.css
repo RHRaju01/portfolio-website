@@ -20,6 +20,31 @@ body {
   line-height: 1.6;
 }
 
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas:
+    "hero hero hero"
+    "about about skills"
+    "projects projects projects"
+    "contact contact contact";
+  gap: 2rem;
+  padding: 2rem;
+}
+
+#about {
+  grid-area: about;
+}
+#skills {
+  grid-area: skills;
+}
+#projects {
+  grid-area: projects;
+}
+#contact {
+  grid-area: contact;
+}
+
 nav {
   display: flex;
   gap: 1.5rem;
