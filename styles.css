@@ -20,6 +20,12 @@ body {
   line-height: 1.6;
 }
 
+nav {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+}
+
 h1,
 h2,
 h3 {
@@ -32,12 +38,19 @@ a {
   color: var(--color-accent);
 }
 
+#hero {
+  text-align: center;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
 .project-card {
   padding: 1.5rem;
   border: 1px solid #ccc;
   margin: 1rem;
-}
-
-#hero {
-  text-align: center;
+  flex: 1 1 300px;
 }
