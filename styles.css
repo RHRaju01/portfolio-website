@@ -14,23 +14,52 @@
 }
 
 body {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body);
   line-height: 1.6;
 }
 
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2rem, 6vw, 4.5rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
 main {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-areas:
-    "hero hero hero"
-    "about about skills"
-    "heading heading heading"
-    "gallery gallery gallery"
-    "contact contact contact";
+    "hero"
+    "about"
+    "heading"
+    "gallery"
+    "contact";
   gap: 2rem;
-  padding: 2rem;
+  padding: clamp(1rem, 4vw, 3rem);
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+      "hero hero hero"
+      "about about skills"
+      "heading heading heading"
+      "gallery gallery gallery"
+      "contact contact contact";
+  }
 }
 
 #hero {
@@ -59,14 +88,6 @@ nav {
   display: flex;
   gap: 1.5rem;
   padding: 1rem 2rem;
-}
-
-h1,
-h2,
-h3 {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  letter-spacing: -0.02em;
 }
 
 a {
