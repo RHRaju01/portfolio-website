@@ -52,7 +52,7 @@ main {
 
 @media (min-width: 768px) {
   main {
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
       "hero hero hero"
       "about about skills"
