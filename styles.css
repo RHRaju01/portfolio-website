@@ -26,20 +26,30 @@ main {
   grid-template-areas:
     "hero hero hero"
     "about about skills"
-    "projects projects projects"
+    "heading heading heading"
+    "gallery gallery gallery"
     "contact contact contact";
   gap: 2rem;
   padding: 2rem;
 }
 
+#hero {
+  grid-area: hero;
+  text-align: center;
+}
 #about {
   grid-area: about;
 }
 #skills {
   grid-area: skills;
 }
-#projects {
-  grid-area: projects;
+
+#projects h2 {
+  grid-area: heading;
+}
+
+#projects .projects-grid {
+  grid-area: gallery;
 }
 #contact {
   grid-area: contact;
@@ -61,10 +71,6 @@ h3 {
 
 a {
   color: var(--color-accent);
-}
-
-#hero {
-  text-align: center;
 }
 
 .projects-grid {
