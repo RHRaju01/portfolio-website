@@ -21,14 +21,17 @@ body {
   line-height: 1.6;
 }
 
+header {
+  position: stikcy;
+  top: 0;
+  z-index: 10;
+}
+
 nav {
   display: flex;
   gap: 1.5rem;
   padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
   background: var(--color-bg);
-  z-index: 10;
 }
 
 main {
