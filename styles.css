@@ -35,11 +35,13 @@ nav {
 }
 
 main {
+  display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
     "hero"
     "about"
-    "gallery"
+    "skills"
+    "projects"
     "contact";
   gap: 2rem;
   padding: clamp(1rem, 4vw, 3rem);
@@ -71,7 +73,6 @@ a {
     grid-template-areas:
       "hero hero hero"
       "about about skills"
-      "heading heading heading"
       "projects projects projects"
       "contact contact contact";
   }
@@ -89,8 +90,8 @@ a {
 }
 
 #projects {
-  grid-area: projects;
   display: grid;
+  grid-area: projects;
   grid-template-areas:
     "heading"
     "gallery";
