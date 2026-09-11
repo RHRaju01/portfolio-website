@@ -13,6 +13,21 @@
   --font-body: "Inter", sans-serif;
 }
 
+[data-theme="dark"] {
+  --color-bg: #1a1a1d;
+  --color-text: #f7f3ed;
+  --color-accent: #e8956b;
+  --color-accent-soft: #3a3a3d;
+}
+
+.theme-toggle__icon::before {
+  content: "☀️";
+}
+
+[data-theme="dark"] .theme-toggle__icon::before {
+  content: "🌙";
+}
+
 body {
   font-size: clamp(1rem, 1.5vw, 1.125rem);
   background-color: var(--color-bg);
