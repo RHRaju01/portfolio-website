@@ -35,12 +35,10 @@ nav {
 }
 
 main {
-  display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
     "hero"
     "about"
-    "heading"
     "gallery"
     "contact";
   gap: 2rem;
@@ -74,7 +72,7 @@ a {
       "hero hero hero"
       "about about skills"
       "heading heading heading"
-      "gallery gallery gallery"
+      "projects projects projects"
       "contact contact contact";
   }
 }
@@ -88,6 +86,15 @@ a {
 }
 #skills {
   grid-area: skills;
+}
+
+#projects {
+  grid-area: projects;
+  display: grid;
+  grid-template-areas:
+    "heading"
+    "gallery";
+  gap: 1.5rem;
 }
 
 #projects h2 {
