@@ -1,9 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 :root {
   --color-bg: #f7f3ed;
   --color-text: #1a1a1d;
@@ -13,19 +7,10 @@
   --font-body: "Inter", sans-serif;
 }
 
-[data-theme="dark"] {
-  --color-bg: #1a1a1d;
-  --color-text: #f7f3ed;
-  --color-accent: #e8956b;
-  --color-accent-soft: #3a3a3d;
-}
-
-.theme-toggle__icon::before {
-  content: "☀️";
-}
-
-[data-theme="dark"] .theme-toggle__icon::before {
-  content: "🌙";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -34,6 +19,33 @@ body {
   color: var(--color-text);
   font-family: var(--font-body);
   line-height: 1.6;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+  background: var(--color-bg);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "hero"
+    "about"
+    "skills"
+    "projects"
+    "contact";
+  gap: 2rem;
+  padding: clamp(1rem, 4vw, 3rem);
 }
 
 h1,
@@ -52,17 +64,14 @@ h2 {
   font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
 
-main {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "hero"
-    "about"
-    "heading"
-    "gallery"
-    "contact";
-  gap: 2rem;
-  padding: clamp(1rem, 4vw, 3rem);
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-accent);
 }
 
 @media (min-width: 768px) {
@@ -71,8 +80,7 @@ main {
     grid-template-areas:
       "hero hero hero"
       "about about skills"
-      "heading heading heading"
-      "gallery gallery gallery"
+      "projects projects projects"
       "contact contact contact";
   }
 }
@@ -88,6 +96,15 @@ main {
   grid-area: skills;
 }
 
+#projects {
+  display: grid;
+  grid-area: projects;
+  grid-template-areas:
+    "heading"
+    "gallery";
+  gap: 1.5rem;
+}
+
 #projects h2 {
   grid-area: heading;
 }
@@ -99,16 +116,6 @@ main {
   grid-area: contact;
 }
 
-nav {
-  display: flex;
-  gap: 1.5rem;
-  padding: 1rem 2rem;
-}
-
-a {
-  color: var(--color-accent);
-}
-
 .projects-grid {
   display: flex;
   flex-wrap: wrap;
@@ -116,7 +123,33 @@ a {
 }
 
 .project-card {
+  position: relative;
   padding: 1.5rem;
   border: 1px solid #ccc;
   flex: 1 1 300px;
+}
+
+.project-card__badge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: var(--color-accent);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+[data-theme="dark"] {
+  --color-bg: #1a1a1d;
+  --color-text: #f7f3ed;
+  --color-accent: #e8956b;
+  --color-accent-soft: #3a3a3d;
+}
+
+.theme-toggle__icon::before {
+  content: "☀️";
+}
+
+[data-theme="dark"] .theme-toggle__icon::before {
+  content: "🌙";
 }
